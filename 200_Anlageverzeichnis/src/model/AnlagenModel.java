@@ -1,6 +1,7 @@
 package model;
 
 import data.Anlage;
+import data.AnlagenColumnEnum;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
@@ -12,26 +13,39 @@ public class AnlagenModel extends AbstractTableModel
 	@Override
 	public int getRowCount()
 	{
-		
+		return anlagen.size();
 	}
 
 	@Override
 	public int getColumnCount()
 	{
-		
-	}
-
-	@Override
-	public Object getValueAt(int rowIndex, int columnIndex)
-	{
-		
+		return AnlagenColumnEnum.values().length;
 	}
 
 	@Override
 	public String getColumnName(int column)
 	{
-		
+		return AnlagenColumnEnum.values()[column].getName();
 	}
+	
+	@Override
+	public Object getValueAt(int rowIndex, int columnIndex)
+	{
+		Anlage a = anlagen.get(rowIndex);
+		switch(AnlagenColumnEnum.values()[columnIndex])
+		{
+			case AFABISHER: ;
+			case AFADIESESJAHR: ;
+			case BISHERIGENUTZDAUER: ;
+			case BUCHWERT: ;
+			case INBETRIEBNAHME: ;
+			case KAUFPREIS: ;
+			case NUTZUNGSDAUER: ;
+			case WERTVORHER: ;
+		}
+		return "???";
+	}
+
 	
 	
 }

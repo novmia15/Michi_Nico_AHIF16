@@ -1,11 +1,16 @@
 package gui;
 
+import model.AnlagenModel;
+
 public class AnlagenverzeichnisGUI extends javax.swing.JFrame
 {
 
+	private AnlagenModel model;
 	public AnlagenverzeichnisGUI()
 	{
 		initComponents();
+		model = new AnlagenModel();
+		
 	}
 
 	@SuppressWarnings("unchecked")
