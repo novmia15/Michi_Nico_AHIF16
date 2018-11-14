@@ -9,7 +9,7 @@ public enum AnlagenColumnEnum
 	AFABISHER("Afa bisher"),
 	WERTVORHER("Wert vorher"),
 	AFADIESESJAHR("Afa dieses Jahr"),
-	BUCHWERT("Buchwert");
+	BUCHWERT("Buchwert 31.12");
 
 	private String name;
 
