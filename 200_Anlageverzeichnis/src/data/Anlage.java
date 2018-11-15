@@ -1,10 +1,13 @@
 package data;
 
+import java.time.LocalDate;
+
 public class Anlage {
 
     private final int kaufPreis;
     private final double inbetriebnahme;
     private final double nutzungsdauer;
+    private final int jahr = (LocalDate.now()).getYear();
 
     public Anlage(int kaufPreis, double inbetriebnahme, double nutzungsdauer) {
         this.kaufPreis = kaufPreis;
@@ -25,15 +28,15 @@ public class Anlage {
     }
 
     public double getBisherigeNutzdauer() {
-        return (nutzungsdauer + inbetriebnahme) - 2018;
+        return (nutzungsdauer + inbetriebnahme) - jahr;
     }
 
     public double getAfabisher() {
-        return (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - 2018);
+        return (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - jahr);
     }
 
     public double getWertvorAfa() {
-        return kaufPreis - (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - 2018);
+        return kaufPreis - (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - jahr);
     }
 
     public double getAfadiesesJahres() {
@@ -41,7 +44,7 @@ public class Anlage {
     }
 
     public double getBuchwert() {
-        return kaufPreis - (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - 2018) - (kaufPreis / nutzungsdauer);
+        return kaufPreis - (kaufPreis / nutzungsdauer) / ((nutzungsdauer + inbetriebnahme) - jahr) - (kaufPreis / nutzungsdauer);
     }
 
 }
