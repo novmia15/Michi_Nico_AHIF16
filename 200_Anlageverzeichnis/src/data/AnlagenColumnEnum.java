@@ -2,16 +2,17 @@ package data;
 
 public enum AnlagenColumnEnum
 {
-	KAUFPREIS("Kaufpreis"),
+        BEZEICHNUNG("Bezeichnung"),
+	KAUFPREIS("AK"),
 	INBETRIEBNAHME("Inbetriebnahme"),
-	NUTZUNGSDAUER("Nutzdauer"),
-	BISHERIGENUTZDAUER("Nutzdauer bisher"),
+	NUTZUNGSDAUER("ND"),
+	BISHERIGENUTZDAUER("bish. ND"),
 	AFABISHER("Afa bisher"),
 	WERTVORHER("Wert vorher"),
-	AFADIESESJAHR("Afa dieses Jahr"),
-	BUCHWERT("Buchwert 31.12");
+	AFADIESESJAHR("Afa d. J."),
+	BUCHWERT("BW 31.12");
 
-	private String name;
+	private final String name;
 
 	private AnlagenColumnEnum(String name)
 	{
@@ -20,6 +21,6 @@ public enum AnlagenColumnEnum
 
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 }
