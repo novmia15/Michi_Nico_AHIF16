@@ -9,7 +9,7 @@ import javax.swing.table.AbstractTableModel;
 
 public class AnlagenModel extends AbstractTableModel
 {
-	private List<Anlage> anlagen = new ArrayList<Anlage>();
+	private final List<Anlage> anlagen = new ArrayList<>();
 	private int aktuellesJahr = (LocalDate.now()).getYear();
 
 	public void setJahr(int jahr)
@@ -44,17 +44,25 @@ public class AnlagenModel extends AbstractTableModel
 	public Object getValueAt(int rowIndex, int columnIndex)
 	{
 		Anlage a = anlagen.get(rowIndex);
-	/*	switch(AnlagenColumnEnum.values()[columnIndex])
-		{
-			case AFABISHER: ;
-			case AFADIESESJAHR: ;
-			case BISHERIGENUTZDAUER: ;
-			case BUCHWERT: ;
-			case INBETRIEBNAHME: ;
-			case KAUFPREIS: ;
-			case NUTZUNGSDAUER: ;
-			case WERTVORHER: ;
-		} */
+//        	switch(AnlagenColumnEnum.values()[columnIndex])
+//		{
+//			case AFABISHER: ;
+//                        break;
+//			case AFADIESESJAHR: ;
+//                        break;
+//			case BISHERIGENUTZDAUER: ;
+//                        break;
+//			case BUCHWERT: ;
+//                        break;
+//			case INBETRIEBNAHME: ;
+//                        break;
+//			case KAUFPREIS: ;
+//                        break;
+//			case NUTZUNGSDAUER: ;
+//                        break;
+//			case WERTVORHER: ;
+//                        break;
+//		} 
 		return "???";
 	}
 
